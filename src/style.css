@@ -1,0 +1,166 @@
+body {
+    position: absolute;
+    width: 1440px;
+    height: 900px;
+    left: 0px;
+    top: 0px;
+    background: url("img/LOLGIF.gif");
+    background-repeat: no-repeat;
+}
+
+.ocultar {
+    display: none;
+}
+
+#logo {
+    position: absolute;
+    width: 578px;
+    height: 179px;
+    left: 431px;
+    top: 392px;
+}
+
+#play {
+    position: absolute;
+    width: 105px;
+    height: 44px;
+    left: 667px;
+    top: 746px;
+    background: #282525;
+    border: 1px solid #CCA43B;
+    box-sizing: border-box;
+    border-radius: 10px;
+    position: absolute;
+    position: absolute;
+    font-family: Krub;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 17px;
+    color: #FFFFFF;
+}
+
+#userName {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 70px;
+    position: absolute;
+    width: 272px;
+    height: 37px;
+    left: 584px;
+    top: 640px;
+    background: #48CAE4;
+    border: 1px solid #48CAE4;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+#home {
+    position: absolute;
+    width: 724px;
+    height: 81px;
+    left: 52px;
+    top: 43px;
+    background: #C4C4C4;
+    border-radius: 10px;
+}
+
+#ihome {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    left: 101px;
+    top: 20px;
+}
+
+#rectangle {
+    position: absolute;
+    width: 1440px;
+    height: 160px;
+    left: 0px;
+    top: 0px;
+    background: #000000;
+}
+
+#hello {
+    position: absolute;
+    width: 238px;
+    height: 119px;
+    left: calc(50% - 238px/2 - 395px);
+    top: 184px;
+    font-family: Barlow Condensed;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 110px;
+    line-height: 132px;
+    color: #FFFFFF;
+    mix-blend-mode: normal;
+}
+
+#showName {
+    position: static;
+    width: 308px;
+    height: 191px;
+    left: 0px;
+    top: calc(50% - 191px/2);
+    font-family: Barlow Condensed;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 150px;
+    line-height: 180px;
+    color: #48CAE4;
+}
+
+#nameLogo1 {
+    /*position: absolute;
+    left: 0%;
+    right: -63.83%;
+    top: 0%;
+    bottom: -64.29%;*/
+    font-family: Krub;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 23px;
+    color: #CCA43B;
+    display: flex;
+    flex-direction: row;
+    float: right;
+}
+
+#imgLogo1 {
+    /*position: absolute;*/
+    width: 150px;
+    height: 150px;
+    /*left: 28px;
+    top: 29.25px;*/
+    flex-direction: row;
+    float: right;
+}
+
+#nameLogo2 {
+    /*position: absolute;
+    left: 0%;
+    right: -63.83%;
+    top: 0%;
+    bottom: -64.29%;*/
+    font-family: Krub;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 23px;
+    color: #CCA43B;
+    display: flex;
+    flex-direction: row;
+    float: right;
+}
+
+#imgLogo2 {
+    /*position: absolute;*/
+    width: 150px;
+    height: 150px;
+    /*left: 28px;*/
+    /*top: 29.25px;*/
+    flex-direction: row;
+    float: right;
+}
