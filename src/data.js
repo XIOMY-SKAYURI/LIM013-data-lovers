@@ -1,9 +1,18 @@
 // estas funciones son de ejemplo
 
-export const example = () => {
-  return 'example';
+
+import lol from "./data/lol/lol.js";
+
+export const filter = () => {
+
+    //Array.prototype.filter()
+    //1.Filtr la el tipo de cameón con aquellos que son asesinos
+    lol.filter(item => item.tags);
+    //Array.prototype.sort()
+    //1.Ordenar los campeones de la A-Z o Z-A
+    return 'filter';
 };
 
 export const anotherExample = () => {
-  return 'OMG';
+    return 'OMG';
 };
