@@ -1,120 +1,314 @@
-    body {
-        /* position: absolute; */
-        /* width: 1440px;
+                        body {
+                            /* position: absolute; */
+                            /* width: 1440px;
     height: 900px; */
-        background-image: url("img/lol.5.jpg");
-        background-attachment: fixed;
-        background-repeat: no-repeat;
-        background-position: center center;
-        background-size: cover;
-    }
-    
-    #rectangle {
-        height: 160px;
-        left: 0px;
-        top: 0px;
-        background: #000000;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        align-items: center;
-    }
-    
-    .imgLog {
-        width: 309px;
-        height: 103px;
-    }
-    
-    ol {
-        list-style: none;
-        display: flex;
-        flex-direction: row;
-    }
-    
-    li {
-        margin: 15px;
-        padding: 10px;
-    }
-    
-    a {
-        font-family: Krub;
-        font-style: normal;
-        font-weight: 200;
-        font-size: 20px;
-        line-height: 47px;
-        color: #FFFFFF;
-        text-decoration: unset;
-    }
-    
-    .ocultar {
-        display: none;
-    }
-    
-    #AllInfoChampions {
-        color: yellow;
-        font-size: 36px;
-    }
-    
-    #AllChampions {
-        display: flex;
-    }
-    
-    h1 {
-        font-family: Barlow Condensed;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 60px;
-        line-height: 72px;
-        color: #CCA43B;
-        text-align: center;
-    }
-    
-    .search {
-        width: 544px;
-        height: 39px;
-        background: #C4C4C4;
-        border-radius: 10px;
-    }
-    
-    main {
-        display: flex;
-    }
-    
-    .informationHeros {
-        display: flex;
-        flex-wrap: wrap;
-    }
-    
-    .containerHero {
-        width: 25%;
-        /* background-color: white;
-        background-color: rgba(192, 192, 192, 0.3);*/
-        text-align: center;
-    }
-    
-    .nameChampions {
-        font-size: 18px;
-        color: #CCA43B;
-    }
-    
-    button {
-        background: none;
-        outline: none;
-        cursor: pointer;
-    }
-    
-    #rectanglefooter {
-        height: 72px;
-        left: 0px;
-        top: 0px;
-        background: #000000;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        align-items: center;
-    }
-    
-    button:hover {
-        background: #3a5a40;
-        border: 2px solid #3a5a40;
-    }
+                            background-image: url("img/lol.5.jpg");
+                            background-attachment: fixed;
+                            background-repeat: no-repeat;
+                            background-position: center center;
+                            background-size: cover;
+                        }
+                        
+                        .ocultar {
+                            display: none;
+                        }
+                        
+                        #rectangle {
+                            height: 160px;
+                            left: 0px;
+                            top: 0px;
+                            background: #000000;
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: space-around;
+                            align-items: center;
+                        }
+                        
+                        .imgLog {
+                            width: 309px;
+                            height: 103px;
+                        }
+                        
+                        ol {
+                            list-style: none;
+                            display: flex;
+                            flex-direction: row;
+                        }
+                        
+                        li {
+                            margin: 15px;
+                            padding: 10px;
+                        }
+                        
+                        a {
+                            font-family: Krub;
+                            font-style: normal;
+                            font-weight: 200;
+                            font-size: 20px;
+                            line-height: 47px;
+                            color: #FFFFFF;
+                            text-decoration: unset;
+                        }
+                        
+                        .ocultar {
+                            display: none;
+                        }
+                        
+                        #AllInfoChampions {
+                            color: yellow;
+                            font-size: 36px;
+                        }
+                        
+                        #AllChampions {
+                            display: flex;
+                        }
+                        
+                        .search {
+                            width: 544px;
+                            height: 39px;
+                            background: #C4C4C4;
+                            border-radius: 10px;
+                        }
+                        
+                        .aboutLOL {
+                            text-align: center;
+                        }
+                        
+                        h1 {
+                            font-family: 'Lucida Sans';
+                            font-weight: bold;
+                            font-size: 80px;
+                            color: #242f40;
+                            text-align: center;
+                            background-color: #e5e5e5;
+                        }
+                        
+                        .iconLOL {
+                            /*display: block;*/
+                            margin: auto;
+                        }
+                        
+                        .centerText {
+                            margin: 0px auto;
+                            font-family: 'Lucida Sans';
+                            font-size: 18px;
+                            color: white;
+                            text-align: center;
+                            width: 50%;
+                        }
+                        
+                        h3 {
+                            font-family: Condensed;
+                            font-style: normal;
+                            font-weight: bold;
+                            font-size: 60px;
+                            line-height: 72px;
+                            color: #CCA43B;
+                            text-align: center;
+                        }
+                        
+                        h4 {
+                            font-family: 'Lucida Sans';
+                            font-weight: bold;
+                            font-size: 18px;
+                            color: #e5e5e5;
+                            text-align: center;
+                            border-top-style: dotted;
+                            border-bottom-style: dotted;
+                        }
+                        
+                        .centerButton {
+                            display: flex;
+                            justify-content: center;
+                        }
+                        
+                        #ZaA {
+                            border-radius: 4px;
+                            background-color: #CCA43B;
+                            border: none;
+                            color: #242f40;
+                            text-align: center;
+                            font-size: 20px;
+                            padding: 20px;
+                            width: 18%;
+                            cursor: pointer;
+                            margin: 5px;
+                            margin: 10px;
+                        }
+                        
+                        .listButton {
+                            display: flex;
+                            flex: row;
+                            justify-content: center;
+                        }
+                        
+                        .listButton :hover {
+                            background-color: rgba(225, 225, 225, 0.5);
+                            border: 2px solid #3a5a40;
+                            border: none;
+                            background-repeat: no-repeat;
+                            background-position: center;
+                            background-size: 170px 180px;
+                            width: 190px;
+                            height: 190px;
+                        }
+                        
+                        .btnFilter {
+                            border: none;
+                            background-repeat: no-repeat;
+                            background-position: center;
+                            background-size: 150px 150px;
+                            width: 160px;
+                            height: 160px;
+                            border-radius: 50%;
+                            background-color: rgba(192, 192, 192, 0.3);
+                            cursor: pointer;
+                        }
+                        
+                        #assassin {
+                            background-image: url("img/ASSASSINELIPSE.png");
+                            margin: 5px;
+                        }
+                        
+                        #fighter {
+                            background-image: url("img/fighterelipse.png");
+                            margin: 5px;
+                        }
+                        
+                        #mage {
+                            background-image: url("img/MAGEELIPSE.png");
+                            margin: 5px;
+                        }
+                        
+                        #marksmen {
+                            background-image: url("img/MARKSMENELIPSE.png");
+                            margin: 5px;
+                        }
+                        
+                        #tank {
+                            background-image: url("img/TANKELIPSE.png");
+                            margin: 5px;
+                        }
+                        
+                        #support {
+                            background-image: url("img/SUPPORTELIPSE.png");
+                            margin: 5px;
+                        }
+                        
+                        #information {
+                            display: flex;
+                            flex-wrap: wrap;
+                            margin: 40px;
+                            justify-content: center;
+                        }
+                        
+                        .containerHero {
+                            width: 15%;
+                            background-color: rgba(192, 192, 192, 0.3);
+                            text-align: center;
+                            color: #CCA43B;
+                            margin: 10px;
+                            border-radius: 10px;
+                            border: 5px;
+                            padding: 5px;
+                            font-weight: bold;
+                            /* padding: 0.5px;*/
+                        }
+                        
+                        .containerInfo {
+                            display: flex;
+                            flex: row;
+                            margin: 2px;
+                            border-style: solid;
+                            justify-content: space-around;
+                            background-color: rgba(36, 47, 64, 0.5);
+                        }
+                        
+                        .nameChampions {
+                            font-size: 24px;
+                            color: #CCA43B;
+                        }
+                        
+                        .namesChampions {
+                            font-size: 24px;
+                            color: #CCA43B;
+                        }
+                        
+                        #titleAssassin {
+                            text-align: center;
+                            text-decoration: underline;
+                            color: white;
+                            font-size: 30px;
+                            font-family: 'Lucida Sans Unicode';
+                        }
+                        
+                        #filterAssassin {
+                            display: flex;
+                            flex-wrap: wrap;
+                            margin: 30px;
+                            justify-content: center;
+                            text-align: center;
+                        }
+                        
+                        .containerAssassin {
+                            width: 20%;
+                            background-color: rgba(255, 100, 70, 0.3);
+                            text-align: center;
+                            margin: 15px;
+                            border: 5px;
+                            padding: 5px;
+                            border-radius: 10px;
+                            /*font-weight: bold;*/
+                            /* padding: 0.5px;*/
+                        }
+                        
+                        .aboutInfo {
+                            font-size: 12px;
+                            font-family: 'Lucida Sans Unicode';
+                            color: #081c15;
+                            border-style: solid;
+                            font-weight: normal;
+                            margin: 10px;
+                            padding: 10px;
+                            background-color: white;
+                            border-radius: 10px;
+                            margin-right: 10px;
+                            margin-left: 10px;
+                        }
+                        
+                        .containerButtons {
+                            display: flex;
+                            flex: row;
+                            justify-content: space-around;
+                            margin: 10px;
+                            padding: 5px;
+                        }
+                        
+                        .buttonInfoGeneral {
+                            color: #CCA43B;
+                            background-color: #242f40;
+                            width: 100px;
+                            cursor: pointer;
+                            border-radius: 10px;
+                            font-size: 12px;
+                        }
+                        
+                        .buttonStats {
+                            color: #CCA43B;
+                            background-color: #242f40;
+                            width: 50px;
+                            cursor: pointer;
+                            border-radius: 10px;
+                            font-size: 12px;
+                        }
+                        
+                        #rectanglefooter {
+                            height: 72px;
+                            left: 0px;
+                            top: 0px;
+                            background: #000000;
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: space-around;
+                            align-items: center;
+                        }
