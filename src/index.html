@@ -13,10 +13,7 @@
         <nav>
             <div id="rectangle" class="">
                 <img src="img/LOGO.png" alt="" class="imgLog">
-                <div>
-                    <input type="search" placeholder="  Search Champion" class="search">
-                    <a class="search-btn" href="#"></a>
-                </div>
+
                 <ol>
                     <li><a href="https://na.leagueoflegends.com/en-us/latest-news/">NEWS</a></li>
                     <li><a href="#">EVENTS</a></li><br>
@@ -25,70 +22,161 @@
             </div>
         </nav>
     </header>
-    <div class="aboutLOL">
-        <div>
-            <h1>ABOUT LEAGUE OF LEGENDS</h1>
-        </div>
-        <div><img class="iconLOL" src="img/micro&macrogamerelipse.png" alt=""><br></div><br>
-        <div class="centerText">
-            League of Legends is a team strategy game in which two teams of five champions face off to see who destroys before the other's base. Choose from a cast of 140 champions to make epic plays, assassinate opponents and take down turrets to rise to victory.
+    <div class="modal" id="miModal">
+        <div class="flex" id="flex">
+            <div class="aboutLOL">
+                <div><span class="close" id="close">&times;</span> <br>
+                    <div>
+                        <h1>ABOUT LEAGUE OF LEGENDS</h1>
+                    </div>
+                    <div><img class="iconLOL" src="img/MICROANDMACRO.png" alt=""><br></div><br>
+                    <div class="centerText">
+                        League of Legends is a team strategy game in which two teams of five champions face off to see who destroys before the other's base. Choose from a cast of 140 champions to make epic plays, assassinate opponents and take down turrets to rise to victory.
+                    </div>
+                    <div><img class="iconLOL" src="img/CHAMPIONSSINFONDO.png" alt=""><br></div><br>
+                    <div class="centerText">
+                        Considering there are over 140 champions, it won't take long to find your style of play. Dominate one or all.
+                    </div>
+                </div>
+            </div>
 
         </div>
+
     </div>
 
     <h3>CHAMPIONS</h3>
     <h4>Type of Champions</h4>
     <div class="listButton">
-        <button class="btnFilter" type="button" id="assassin"></button><br><br><br><br>
-        <button class="btnFilter" type="button" id="fighter"></button><br><br><br><br>
-        <button class="btnFilter" type="button" id="mage"></button><br><br><br><br>
-        <button class="btnFilter" type="button" id="marksmen"></button><br><br><br><br>
-        <button class="btnFilter" type="button" id="tank"></button><br><br><br><br>
-        <button class="btnFilter" type="button" id="support"></button>
+        <button class="btnFilter" type="button" id="Assassin"></button><br><br><br><br>
+        <button class="btnFilter" type="button" id="Fighter"></button><br><br><br><br>
+        <button class="btnFilter" type="button" id="Mage"></button><br><br><br><br>
+        <button class="btnFilter" type="button" id="Marksman"></button><br><br><br><br>
+        <button class="btnFilter" type="button" id="Tank"></button><br><br><br><br>
+        <button class="btnFilter" type="button" id="Support"></button>
+    </div>
+    <br>
+    <div id="divBuscar">
+        <input type="text" placeholder="Search Champion" id="search1">
+        <a id="search-btn" href="#"></a>
+        <button id="buscarBoton"></button>
+    </div>
+    <br>
+    <div id="titleType">
+        <h8 id="assassin" class="ocultar">Assassin</h8>
+        <h8 id="fighter" class="ocultar">Fighter</h8>
+        <h8 id="mage" class="ocultar">Mage</h8>
+        <h8 id="marksman" class="ocultar">Marksman</h8>
+        <h8 id="tank" class="ocultar">Tank</h8>
+        <h8 id="support" class="ocultar">Support</h8>
     </div>
 
-    <h4>Sort list of Champions</h4>
-    <div class="centerButton">
-        <BUTTON id="ZaA">
-        alphabetically</BUTTON>
-        <BUTTON id="ZaA">
-        difficulty level</BUTTON>
-    </div>
+    <input type="search" placeholder="  Search Champion" id="search2" class="ocultar">
+    <a id="search-btn1" class="ocultar" href="#"></a>
+    <br>
+
     <main>
-        <!--Show Champions-->
-        <section id="showChampions">
+
+        <aside id="boxesSort">
+            <div class="containerBoxes">
+                <h5>Sort list of Champions</h5>
+                <div class="containerBox">
+
+                    <p class="alphabetically">
+                        <label for="alphabetically"><strong>ALPHABETICALLY:</strong> </label><br/><br>
+                        <input type="radio" name="sort" id="AtoZ">From A to Z
+                        <br>
+                        <input type="radio" name="sort" id="ZtoA">From Z to A
+                    </p>
+                    <br>
+
+                    <p class="difficultylevel"> </p>
+                    <label for="difficultylevel"> <strong>DIFFICULTY LEVEL:</strong>  </label><br/><br>
+
+                    <section class="level">
+                        <div id="range1">
+                            <button id="range1to4" class="levels" name="sort"></button>
+                            <p class="pd">low</p>
+                        </div>
+                        <br>
+                        <div id="range2">
+                            <button id="range5to7" class="levels" name="sort"></button>
+                            <p class="pd">moderate</p>
+                        </div>
+                        <br>
+                        <div id="range3">
+                            <button id="range8to10" class="levels" name="sort"></button>
+                            <p class="pd">high</p>
+                        </div>
+                    </section>
+
+
+                </div>
+            </div>
+        </aside>
+        <aside class="ocultar" id="containerStats">
+            <div id="containerResultStats">
+                <h5>
+                    General Statistics</h5>
+                <section id="showstats">
+
+                </section>
+            </div>
+
+        </aside>
+        <section>
+            <!--Show Champions-->
             <section id="showChampions">
+
                 <div id="information"></div>
+
+            </section>
+            <section id="showBuscador">
+                <div id="buscador"></div>
             </section>
 
-            <section id="showAssassin" class="ocultar">
-                <p id="titleAssassin">ASSASSIN</p>
-                <div id="filterAssassin"></div>
+            <section id="containerChampion">
+                <section id="containerChampions">
+                </section>
             </section>
 
-            <section class="ocultar" id="showFighter">
-                <p id="titleFighter">FIGHTER</p>
-                <div id="filterFighter "></div>
-            </section>
-            <section class="ocultar" id="showMage">
-                <p id=titleMage>MAGE</p>
-                <div id="filterMage"></div>
+            <!-- <section id="containerModal" class="ocultar">
+                <div id="miModales">
+            </section> -->
+            <!-- <div class="modalcontenido" id="miModals">
+                    <a href="#">X</a>
+                    <h2>Mi primer Modal</h2>
+                    <p>Este es mi primera ventana modal sin utilizar JavaScript.</p>
+                    <p id="nameModal">name</p>
+                    <img id="imgModal">
+                    <p id="blurbModal">blurb</p>
+                    <p id="attackModal">Attack</p>
+                    <p id="defenseModal">Defense</p>
+                    <p id="magicModal">Magic</p>
+                    <p id="difficultyModal">Difficulty</p>
+
+                </div> -->
+            <!-- <section id="modalContainerChampions"></section> -->
+
+            <section id="ordenar1" class="ocultar">
+                <div id="OrdenarAaZ"></div>
             </section>
 
-            <section class="ocultar " id="showMarkmen">
-                <p id=titleMarksmen>MARKSMEN</p>
-                <div id="filterMarksman "></div>
-            </section>
-            <section class="ocultar " id="showTank">
-                <p id=titleTank>TANK</p>
-                <div id="filterTank "></div>
-            </section>
-            <section class="ocultar " id="showSupport">
-                <p id=titleSupport>SUPPORT</p>
-                <div id="filterSupport "></div>
+            <section id="ordenar2" class="ocultar">
+                <div id="OrdenarZaA"></div>
             </section>
 
-            <div id="OrdenarZaZ " class="ocultar "></div>
+            <section id="rangeLow" class="ocultar">
+                <div id="Ordenar1to4"></div>
+            </section>
+
+            <section id="rangeModerate" class="ocultar">
+                <div id="Ordenar5to7"></div>
+            </section>
+
+            <section id="rangeHigh" class="ocultar">
+                <div id="Ordenar8to10"></div>
+            </section>
+        </section>
 
     </main>
 
