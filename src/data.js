@@ -1,6 +1,6 @@
 import lol from "./data/lol/lol.js";
 const arrayChampions = Object.values(lol.data);
-console.log(arrayChampions);
+// console.log(arrayChampions);
 
 //FILTRAR POR TIPO
 const filter = {
@@ -31,18 +31,18 @@ const promediohp = (dataChampionsType) => {
 
 //MOSTRAR PROMEDIO MANÁ 
 const promediomp = (dataChampionsType) => {
-    const promTotal = dataChampionsType.reduce((total, currentChampions, index, array) => {
-        total += currentChampions.stats.mp
-        if (index === array.length - 1) {
-            return (total / array.length).toFixed(2)
-        } else {
-            return total
-        }
-    }, 0)
-    return (promTotal);
-}
-const filterAssassin = filter.filtertype(arrayChampions, "Tank")
-console.log(promediomp(filterAssassin));
+        const promTotal = dataChampionsType.reduce((total, currentChampions, index, array) => {
+            total += currentChampions.stats.mp
+            if (index === array.length - 1) {
+                return (total / array.length).toFixed(2)
+            } else {
+                return total
+            }
+        }, 0)
+        return (promTotal);
+    }
+    // const filterAssassin = filter.filtertype(arrayChampions, "Tank")
+    // console.log(promediomp(filterAssassin));
 
 //MOSTRAR MÁXIMO ARMOR
 
@@ -64,8 +64,8 @@ const maxarmor = (dataChampions) => {
 };
 
 
-const typeChampion = filter.filtertype(arrayChampions, "Assassin")
-console.log(maxarmor(typeChampion));
+// const typeChampion = filter.filtertype(arrayChampions, "Assassin")
+// console.log(maxarmor(typeChampion));
 
 //MOSTRAR MÍNIMO ARMOR
 const minarmor = (dataChampions) => {
@@ -124,7 +124,7 @@ const minspellblock = (dataChampions) => {
 
     return primero
 };
-const typeChampions = filter.filtertype(arrayChampions, "Assassin")
+// const typeChampions = filter.filtertype(arrayChampions, "Assassin")
 
 
 
@@ -134,7 +134,7 @@ const typeChampions = filter.filtertype(arrayChampions, "Assassin")
 const result1to4 = arrayChampions.filter((objetoCampeon) => {
     return objetoCampeon.info.difficulty >= 1 && objetoCampeon.info.difficulty <= 4
 });
-// console.log(result1to4);
+//  console.log(result1to4);
 
 const result5to7 = arrayChampions.filter((objetoCampeon) => {
     return objetoCampeon.info.difficulty >= 5 && objetoCampeon.info.difficulty <= 7
@@ -146,12 +146,12 @@ const result8to10 = arrayChampions.filter((objetoCampeon) => {
 });
 // console.log(result8to10);
 
-const result = (a, b) => {
-        return arrayChampions.filter((objetoCampeon) => {
-            return objetoCampeon.info.difficulty >= a && objetoCampeon.info.difficulty <= b
-        });
-    }
-    // console.log(result(8, 10));
+// const result = (a, b) => {
+//         return arrayChampions.filter((objetoCampeon) => {
+//             return objetoCampeon.info.difficulty >= a && objetoCampeon.info.difficulty <= b
+//         });
+//     }
+// console.log(result(8, 10));
 
 //ORDENAR DE LA A-Z Y DE Z-A
 //destructuracion y me trae todos los elementos

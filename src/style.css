@@ -1,656 +1,721 @@
-                            body {
-                                /* position: absolute; */
-                                /* width: 1440px;
+                                body {
+                                    /* position: absolute; */
+                                    /* width: 1440px;
     height: 900px; */
-                                background-image: url("img/lol.5.jpg");
-                                background-attachment: fixed;
-                                background-repeat: no-repeat;
-                                background-position: center center;
-                                background-size: cover;
-                            }
-                            
-                            .ocultar {
-                                display: none;
-                            }
-                            
-                            #rectangle {
-                                height: 160px;
-                                left: 0px;
-                                top: 0px;
-                                background: #000000;
-                                display: flex;
-                                flex-direction: row;
-                                justify-content: space-around;
-                                align-items: center;
-                            }
-                            
-                            .imgLog {
-                                width: 309px;
-                                height: 103px;
-                            }
-                            
-                            ol {
-                                list-style: none;
-                                display: flex;
-                                flex-direction: row;
-                            }
-                            
-                            li {
-                                margin: 15px;
-                                padding: 10px;
-                            }
-                            
-                            a {
-                                font-family: Krub;
-                                font-style: normal;
-                                font-weight: 200;
-                                font-size: 20px;
-                                line-height: 47px;
-                                color: #FFFFFF;
-                                text-decoration: unset;
-                            }
-                            
-                            .ocultar {
-                                display: none;
-                            }
-                            
-                            #AllInfoChampions {
-                                color: yellow;
-                                font-size: 36px;
-                            }
-                            
-                            #AllChampions {
-                                display: flex;
-                            }
-                            
-                            #divBuscar {
-                                display: flex;
-                                flex-direction: row;
-                                justify-content: space-evenly;
-                            }
-                            
-                            #search1 {
-                                width: 544px;
-                                height: 39px;
-                                background: #C4C4C4;
-                                border-radius: 10px;
-                                position: absolute;
-                                margin: 0 auto;
-                                left: 0;
-                                right: 0;
-                            }
-                            
-                            #search-btn {
-                                font-family: Krub;
-                                font-style: normal;
-                                font-weight: 200;
-                                font-size: 20px;
-                                line-height: 47px;
-                                color: #FFFFFF;
-                                text-decoration: unset;
-                            }
-                            
-                            #buscarBoton {
-                                background-image: url("img/search.png");
-                                border: none;
-                                background-repeat: no-repeat;
-                                background-position: center;
-                                background-size: 35px 35px;
-                                width: 45px;
-                                height: 45px;
-                                cursor: pointer;
-                                padding: 10px;
-                                margin-left: 15px;
-                                background-color: #C4C4C4;
-                                border-radius: 10px;
-                            }
-                            
-                            .modal {
-                                /* display: none; */
-                                position: fixed;
-                                z-index: 1;
-                                overflow: auto;
-                                left: 0;
-                                top: 0;
-                                width: 100%;
-                                height: 100%;
-                                background: rgba(0, 0, 0, 0.452);
-                            }
-                            
-                            .flex {
-                                width: 100%;
-                                height: 100%;
-                                display: flex;
-                                justify-content: center;
-                                align-items: center;
-                            }
-                            
-                            .aboutLOL {
-                                position: relative;
-                                background-image: url("img/fondomodal.jpg");
-                                background-attachment: fixed;
-                                background-repeat: no-repeat;
-                                background-position: center center;
-                                background-size: cover;
-                                margin: auto;
-                                width: 30%;
-                                box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.452);
-                                animation-name: modal;
-                                animation-duration: 2s;
-                            }
-                            
-                            @keyframes modal {
-                                from {
-                                    top: -330px;
-                                    opacity: 0;
+                                    background-image: url("img/lol.5.jpg");
+                                    background-attachment: fixed;
+                                    background-repeat: no-repeat;
+                                    background-position: center center;
+                                    background-size: cover;
                                 }
-                                to {
+                                
+                                @media screen and (max-width: 414px) {
+                                    /* For mobile phones: */
+                                    .btnFilter {
+                                        border: none;
+                                        background-repeat: no-repeat;
+                                        background-position: center;
+                                        background-size: 50px 50px;
+                                        width: 55px;
+                                        height: 55px;
+                                        border-radius: 50%;
+                                        background-color: rgba(192, 192, 192, 0.3);
+                                        cursor: pointer;
+                                    }
+                                }
+                                
+                                .ocultar {
+                                    display: none;
+                                }
+                                
+                                #rectangle {
+                                    height: 160px;
+                                    left: 0px;
+                                    top: 0px;
+                                    background: #000000;
+                                    display: flex;
+                                    flex-direction: row;
+                                    justify-content: space-around;
+                                    align-items: center;
+                                }
+                                
+                                .imgLog {
+                                    width: 309px;
+                                    height: 103px;
+                                }
+                                
+                                ol {
+                                    list-style: none;
+                                    display: flex;
+                                    flex-direction: row;
+                                }
+                                
+                                li {
+                                    margin: 15px;
+                                    padding: 10px;
+                                }
+                                
+                                a {
+                                    font-family: Krub;
+                                    font-style: normal;
+                                    font-weight: 200;
+                                    font-size: 20px;
+                                    line-height: 47px;
+                                    color: #FFFFFF;
+                                    text-decoration: unset;
+                                }
+                                
+                                .ocultar {
+                                    display: none;
+                                }
+                                
+                                #AllInfoChampions {
+                                    color: yellow;
+                                    font-size: 36px;
+                                }
+                                
+                                #AllChampions {
+                                    display: flex;
+                                }
+                                
+                                #divBuscar {
+                                    display: flex;
+                                    flex-direction: row;
+                                    justify-content: space-evenly;
+                                }
+                                
+                                #search1 {
+                                    width: 544px;
+                                    height: 39px;
+                                    background: #C4C4C4;
+                                    border-radius: 10px;
+                                    position: absolute;
+                                    margin: 0 auto;
+                                    left: 0;
+                                    right: 0;
+                                }
+                                
+                                #search-btn {
+                                    font-family: Krub;
+                                    font-style: normal;
+                                    font-weight: 200;
+                                    font-size: 20px;
+                                    line-height: 47px;
+                                    color: #FFFFFF;
+                                    text-decoration: unset;
+                                }
+                                
+                                #buscarBoton {
+                                    background-image: url("img/search.png");
+                                    border: none;
+                                    background-repeat: no-repeat;
+                                    background-position: center;
+                                    background-size: 35px 35px;
+                                    width: 45px;
+                                    height: 45px;
+                                    cursor: pointer;
+                                    padding: 10px;
+                                    margin-left: 15px;
+                                    background-color: #C4C4C4;
+                                    border-radius: 10px;
+                                }
+                                
+                                .modal {
+                                    /* display: none; */
+                                    position: fixed;
+                                    z-index: 1;
+                                    overflow: auto;
+                                    left: 0;
                                     top: 0;
-                                    opacity: 1;
+                                    width: 100%;
+                                    height: 100%;
+                                    background: rgba(0, 0, 0, 0.452);
                                 }
-                            }
-                            
-                            .close {
-                                float: right;
-                                font-size: 48px;
-                                padding: 5px;
-                                margin: 5px;
-                                background-color: salmon;
-                            }
-                            
-                            .close:hover {
-                                color: white;
-                                text-decoration: none;
-                                cursor: pointer;
-                            }
-                            
-                            h1 {
-                                font-family: 'Lucida Sans';
-                                font-weight: bold;
-                                font-size: 30px;
-                                color: #242f40;
-                                text-align: center;
-                            }
-                            
-                            .iconLOL {
-                                width: 15%;
-                                display: block;
-                                margin: auto;
-                            }
-                            
-                            .centerText {
-                                margin: 0px auto;
-                                font-family: 'Segoe UI';
-                                font-size: 18px;
-                                color: #283618;
-                                text-align: center;
-                                width: 50%;
-                                margin-bottom: 30px;
-                                margin-top: 0px;
-                            }
-                            
-                            h3 {
-                                font-family: Condensed;
-                                font-style: normal;
-                                font-weight: bold;
-                                font-size: 60px;
-                                line-height: 72px;
-                                color: #CCA43B;
-                                text-align: center;
-                            }
-                            
-                            .listButton {
-                                display: flex;
-                                flex: row;
-                                justify-content: center;
-                            }
-                            
-                            .listButton :hover {
-                                background-color: rgba(225, 225, 225, 0.5);
-                                border: 2px solid #3a5a40;
-                                border: none;
-                                background-repeat: no-repeat;
-                                background-position: center;
-                                background-size: 170px 180px;
-                                width: 190px;
-                                height: 190px;
-                            }
-                            
-                            .btnFilter {
-                                border: none;
-                                background-repeat: no-repeat;
-                                background-position: center;
-                                background-size: 150px 150px;
-                                width: 160px;
-                                height: 160px;
-                                border-radius: 50%;
-                                background-color: rgba(192, 192, 192, 0.3);
-                                cursor: pointer;
-                            }
-                            
-                            #Assassin {
-                                background-image: url("img/ASSASSINELIPSE.png");
-                                margin: 5px;
-                            }
-                            
-                            #Fighter {
-                                background-image: url("img/fighterelipse.png");
-                                margin: 5px;
-                            }
-                            
-                            #Mage {
-                                background-image: url("img/MAGEELIPSE.png");
-                                margin: 5px;
-                            }
-                            
-                            #Marksman {
-                                background-image: url("img/MARKSMENELIPSE.png");
-                                margin: 5px;
-                            }
-                            
-                            #Tank {
-                                background-image: url("img/TANKELIPSE.png");
-                                margin: 5px;
-                            }
-                            
-                            #Support {
-                                background-image: url("img/SUPPORTELIPSE.png");
-                                margin: 5px;
-                            }
-                            
-                            main {
-                                display: flex;
-                            }
-                            
-                            h4 {
-                                font-family: 'Lucida Sans';
-                                font-weight: bold;
-                                font-size: 18px;
-                                color: white;
-                                text-align: center;
-                                border-top-style: dotted;
-                                border-bottom-style: dotted;
-                            }
-                            
-                            h5 {
-                                font-family: 'Lucida Sans';
-                                font-weight: bold;
-                                font-size: 18px;
-                                color: #363636;
-                                text-align: center;
-                                border-top-style: dotted;
-                                border-bottom-style: dotted;
-                            }
-                            
-                            .containerBoxes {
-                                background-color: #eadda6;
-                                padding: 10px;
-                                margin-top: 50px;
-                                margin-left: 50px;
-                                display: flex;
-                                flex-direction: column;
-                            }
-                            
-                            .containerBox {
-                                /*display: flex;
+                                
+                                .flex {
+                                    width: 100%;
+                                    height: 100%;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                }
+                                
+                                .aboutLOL {
+                                    position: relative;
+                                    background-image: url("img/fondomodal.jpg");
+                                    background-attachment: fixed;
+                                    background-repeat: no-repeat;
+                                    background-position: center center;
+                                    background-size: cover;
+                                    margin: auto;
+                                    width: 30%;
+                                    box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.452);
+                                    animation-name: modal;
+                                    animation-duration: 2s;
+                                }
+                                
+                                @keyframes modal {
+                                    from {
+                                        top: -330px;
+                                        opacity: 0;
+                                    }
+                                    to {
+                                        top: 0;
+                                        opacity: 1;
+                                    }
+                                }
+                                
+                                .close {
+                                    float: right;
+                                    font-size: 48px;
+                                    padding: 5px;
+                                    margin: 5px;
+                                    background-color: salmon;
+                                }
+                                
+                                .close:hover {
+                                    color: white;
+                                    text-decoration: none;
+                                    cursor: pointer;
+                                }
+                                
+                                h1 {
+                                    font-family: 'Lucida Sans';
+                                    font-weight: bold;
+                                    font-size: 30px;
+                                    color: #242f40;
+                                    text-align: center;
+                                }
+                                
+                                .iconLOL {
+                                    width: 15%;
+                                    display: block;
+                                    margin: auto;
+                                }
+                                
+                                .centerText {
+                                    margin: 0px auto;
+                                    font-family: 'Segoe UI';
+                                    font-size: 18px;
+                                    color: #283618;
+                                    text-align: center;
+                                    width: 50%;
+                                    margin-bottom: 30px;
+                                    margin-top: 0px;
+                                }
+                                
+                                h3 {
+                                    font-family: Condensed;
+                                    font-style: normal;
+                                    font-weight: bold;
+                                    font-size: 60px;
+                                    line-height: 72px;
+                                    color: #CCA43B;
+                                    text-align: center;
+                                }
+                                
+                                .listButton {
+                                    display: flex;
+                                    flex: row;
+                                    justify-content: center;
+                                }
+                                
+                                .listButton :hover {
+                                    background-color: rgba(225, 225, 225, 0.5);
+                                    border: 2px solid #3a5a40;
+                                    border: none;
+                                    background-repeat: no-repeat;
+                                    background-position: center;
+                                    background-size: 170px 180px;
+                                    width: 190px;
+                                    height: 190px;
+                                }
+                                
+                                .btnFilter {
+                                    border: none;
+                                    background-repeat: no-repeat;
+                                    background-position: center;
+                                    background-size: 150px 150px;
+                                    width: 160px;
+                                    height: 160px;
+                                    border-radius: 50%;
+                                    background-color: rgba(192, 192, 192, 0.3);
+                                    cursor: pointer;
+                                }
+                                
+                                #Assassin {
+                                    background-image: url("img/ASSASSINELIPSE.png");
+                                    margin: 5px;
+                                }
+                                
+                                #Fighter {
+                                    background-image: url("img/fighterelipse.png");
+                                    margin: 5px;
+                                }
+                                
+                                #Mage {
+                                    background-image: url("img/MAGEELIPSE.png");
+                                    margin: 5px;
+                                }
+                                
+                                #Marksman {
+                                    background-image: url("img/MARKSMENELIPSE.png");
+                                    margin: 5px;
+                                }
+                                
+                                #Tank {
+                                    background-image: url("img/TANKELIPSE.png");
+                                    margin: 5px;
+                                }
+                                
+                                #Support {
+                                    background-image: url("img/SUPPORTELIPSE.png");
+                                    margin: 5px;
+                                }
+                                
+                                main {
+                                    display: flex;
+                                }
+                                
+                                h4 {
+                                    font-family: 'Lucida Sans';
+                                    font-weight: bold;
+                                    font-size: 18px;
+                                    color: white;
+                                    text-align: center;
+                                    border-top-style: dotted;
+                                    border-bottom-style: dotted;
+                                }
+                                
+                                h5 {
+                                    font-family: 'Lucida Sans';
+                                    font-weight: bold;
+                                    font-size: 18px;
+                                    color: #363636;
+                                    text-align: center;
+                                    border-top-style: dotted;
+                                    border-bottom-style: dotted;
+                                }
+                                
+                                .containerBoxes {
+                                    background-color: #eadda6;
+                                    padding: 10px;
+                                    margin-top: 50px;
+                                    margin-left: 50px;
+                                    display: flex;
+                                    flex-direction: column;
+                                }
+                                
+                                .containerBox {
+                                    /*display: flex;
                             flex-direction: column;*/
-                                color: #CCA43B;
-                                font-size: 14px;
-                                justify-content: center;
-                                margin: 5px;
-                                background-color: #242f40;
-                                text-align: center;
-                            }
-                            
-                            .level {
-                                display: flex;
-                                flex-direction: column;
-                                font-size: 12px;
-                                align-items: center;
-                                text-align: center;
-                            }
-                            
-                            .levels {
-                                border: none;
-                                background-repeat: no-repeat;
-                                background-position: center;
-                                background-size: 40px 30px;
-                                width: 40px;
-                                height: 30px;
-                                border-radius: 0%;
-                                background-color: rgba(192, 192, 192, 0.0);
-                                cursor: pointer;
-                                margin: 15px;
-                                /*height: 60px;*/
-                            }
-                            
-                            .pd {
-                                margin: 0%;
-                                padding: 0%;
-                            }
-                            
-                            #range1to4 {
-                                background-image: url("img/levedificultad.png");
-                                margin: 0%;
-                            }
-                            
-                            #range5to7 {
-                                background-image: url("img/moderadificultad.png");
-                                margin: 0%;
-                            }
-                            
-                            #range8to10 {
-                                background-image: url("img/mayordificultad.png");
-                                margin: 0%;
-                            }
-                            
-                            #range1 {
-                                margin-bottom: 12px;
-                            }
-                            
-                            #range2 {
-                                margin-bottom: 12px;
-                            }
-                            
-                            #range3 {
-                                margin-bottom: 12px;
-                            }
-                            
-                            .alphabetically {
-                                color: #CCA43B;
-                                text-align: center;
-                                font-size: 18px;
-                                padding: 8px;
-                            }
-                            /*.difficultylevel {
+                                    color: #CCA43B;
+                                    font-size: 14px;
+                                    justify-content: center;
+                                    margin: 5px;
+                                    background-color: #242f40;
+                                    text-align: center;
+                                }
+                                
+                                .level {
+                                    display: flex;
+                                    flex-direction: column;
+                                    font-size: 12px;
+                                    align-items: center;
+                                    text-align: center;
+                                }
+                                
+                                .levels {
+                                    border: none;
+                                    background-repeat: no-repeat;
+                                    background-position: center;
+                                    background-size: 40px 30px;
+                                    width: 40px;
+                                    height: 30px;
+                                    border-radius: 0%;
+                                    background-color: rgba(192, 192, 192, 0.0);
+                                    cursor: pointer;
+                                    margin: 15px;
+                                    /*height: 60px;*/
+                                }
+                                
+                                .pd {
+                                    margin: 0%;
+                                    padding: 0%;
+                                }
+                                
+                                #range1to4 {
+                                    background-image: url("img/levedificultad.png");
+                                    margin: 0%;
+                                }
+                                
+                                #range5to7 {
+                                    background-image: url("img/moderadificultad.png");
+                                    margin: 0%;
+                                }
+                                
+                                #range8to10 {
+                                    background-image: url("img/mayordificultad.png");
+                                    margin: 0%;
+                                }
+                                
+                                #range1 {
+                                    margin-bottom: 12px;
+                                }
+                                
+                                #range2 {
+                                    margin-bottom: 12px;
+                                }
+                                
+                                #range3 {
+                                    margin-bottom: 12px;
+                                }
+                                
+                                .alphabetically {
+                                    color: #CCA43B;
+                                    text-align: center;
+                                    font-size: 18px;
+                                    padding: 8px;
+                                }
+                                /*.difficultylevel {
                             color: #CCA43B;
                             text-align: center;
                             font-size: 18px;
                             padding: 8px;
                             float: left;
                         }*/
-                            
-                            #ZaA {
-                                border-radius: 4px;
-                                background-color: #CCA43B;
-                                border: none;
-                                color: #242f40;
-                                text-align: center;
-                                font-size: 20px;
-                                padding: 20px;
-                                width: 18%;
-                                cursor: pointer;
-                                margin: 5px;
-                                margin: 10px;
-                            }
-                            
-                            #titleType {
-                                display: flex;
-                                justify-content: center;
-                                justify-items: center;
-                            }
-                            
-                            h8 {
-                                font-family: Condensed;
-                                font-style: normal;
-                                font-size: 40px;
-                                line-height: 72px;
-                                color: white;
-                                text-align: center;
-                                text-decoration: underline;
-                            }
-                            
-                            #search2 {
-                                width: 544px;
-                                height: 39px;
-                                background: #C4C4C4;
-                                border-radius: 10px;
-                                position: absolute;
-                                margin: 0 auto;
-                                left: 0;
-                                right: 0;
-                                margin-bottom: 10px;
-                            }
-                            
-                            #search-btn1 {
-                                font-family: Krub;
-                                font-style: normal;
-                                font-weight: 200;
-                                font-size: 20px;
-                                line-height: 47px;
-                                color: #FFFFFF;
-                                text-decoration: unset;
-                            }
-                            
-                            #information {
-                                display: flex;
-                                flex-wrap: wrap;
-                                justify-content: center;
-                                margin-top: 40px;
-                                margin-bottom: 40px;
-                                margin-right: 40px;
-                                margin-left: 30px;
-                            }
-                            
-                            .containerHero {
-                                width: 15%;
-                                background-color: rgba(192, 192, 192, 0.3);
-                                text-align: center;
-                                color: #CCA43B;
-                                margin: 10px;
-                                border-radius: 10px;
-                                border: 5px;
-                                padding: 5px;
-                                font-weight: bold;
-                                /* padding: 0.5px;*/
-                            }
-                            
-                            #buscador {
-                                display: flex;
-                                justify-content: center;
-                                align-items: center;
-                                text-align: center;
-                                flex-wrap: wrap;
-                                margin-top: 40px;
-                                margin-bottom: 40px;
-                                margin-right: 40px;
-                                margin-left: 30px;
-                            }
-                            
-                            .imgSearch {
-                                width: 200px;
-                                height: 150px;
-                            }
-                            
-                            .containerHeroSearch {
-                                background-color: rgba(192, 192, 192, 0.3);
-                                text-align: center;
-                                color: #CCA43B;
-                                margin: 10px;
-                                border-radius: 10px;
-                                border: 5px;
-                                padding: 10px;
-                                font-weight: bold;
-                                /* padding: 0.5px;*/
-                            }
-                            
-                            .containerInfoSearch {
-                                display: flex;
-                                flex: row;
-                                margin: 5px;
-                                border-style: solid;
-                                justify-content: space-around;
-                                background-color: rgba(36, 47, 64, 0.5);
-                            }
-                            
-                            #OrdenarZaA {
-                                display: flex;
-                                flex-wrap: wrap;
-                                justify-content: center;
-                                margin-top: 40px;
-                                margin-bottom: 40px;
-                                margin-right: 40px;
-                                margin-left: 30px;
-                            }
-                            
-                            .containerOrder {
-                                width: 15%;
-                                background-color: rgba(250, 190, 88, 0.3);
-                                text-align: center;
-                                color: #CCA43B;
-                                margin: 10px;
-                                border-radius: 10px;
-                                border: 5px;
-                                padding: 5px;
-                                font-weight: bold;
-                            }
-                            
-                            .containerInfo {
-                                display: flex;
-                                flex: row;
-                                margin: 2px;
-                                border-style: solid;
-                                justify-content: space-around;
-                                background-color: rgba(36, 47, 64, 0.5);
-                            }
-                            
-                            .nameChampions {
-                                font-size: 24px;
-                                color: #CCA43B;
-                            }
-                            
-                            .namesChampions {
-                                font-size: 24px;
-                                color: #CCA43B;
-                                /* background-color: black; */
-                                margin: 0px;
-                                margin-bottom: 5px;
-                            }
-                            
-                            #titleAssassin {
-                                text-align: center;
-                                text-decoration: underline;
-                                color: white;
-                                font-size: 30px;
-                                font-family: 'Lucida Sans Unicode';
-                            }
-                            
-                            #containerChampions {
-                                display: flex;
-                                flex-wrap: wrap;
-                                margin-top: 40px;
-                                margin-bottom: 40px;
-                                margin-right: 40px;
-                                margin-left: 30px;
-                                justify-content: center;
-                                text-align: center;
-                            }
-                            
-                            #container {
-                                width: 20%;
-                                background-color: rgba(255, 100, 70, 0.3);
-                                text-align: center;
-                                margin: 10px;
-                                border: 5px;
-                                padding: 5px;
-                                border-radius: 10px;
-                                position: relative;
-                                /*font-weight: bold;*/
-                                /* padding: 0.5px;*/
-                            }
-                            
-                            #containerModal {
-                                background-color: rgba(0, 0, 0, .8);
-                                /* position: relative; */
-                                position: fixed;
-                                z-index: 1;
-                                overflow: auto;
-                                top: 0;
-                                right: 0;
-                                bottom: 0;
-                                left: 0;
-                                animation-name: modal;
-                                animation-duration: 2s;
-                                /* opacity: 0;
+                                
+                                #ZaA {
+                                    border-radius: 4px;
+                                    background-color: #CCA43B;
+                                    border: none;
+                                    color: #242f40;
+                                    text-align: center;
+                                    font-size: 20px;
+                                    padding: 20px;
+                                    width: 18%;
+                                    cursor: pointer;
+                                    margin: 5px;
+                                    margin: 10px;
+                                }
+                                
+                                #titleType {
+                                    display: flex;
+                                    justify-content: center;
+                                    justify-items: center;
+                                }
+                                
+                                h8 {
+                                    font-family: Condensed;
+                                    font-style: normal;
+                                    font-size: 40px;
+                                    line-height: 72px;
+                                    color: white;
+                                    text-align: center;
+                                    text-decoration: underline;
+                                }
+                                
+                                #search2 {
+                                    width: 544px;
+                                    height: 39px;
+                                    background: #C4C4C4;
+                                    border-radius: 10px;
+                                    position: absolute;
+                                    margin: 0 auto;
+                                    left: 0;
+                                    right: 0;
+                                    margin-bottom: 10px;
+                                }
+                                
+                                #search-btn1 {
+                                    font-family: Krub;
+                                    font-style: normal;
+                                    font-weight: 200;
+                                    font-size: 20px;
+                                    line-height: 47px;
+                                    color: #FFFFFF;
+                                    text-decoration: unset;
+                                }
+                                
+                                #information {
+                                    display: flex;
+                                    flex-wrap: wrap;
+                                    justify-content: center;
+                                    margin-top: 40px;
+                                    margin-bottom: 40px;
+                                    margin-right: 40px;
+                                    margin-left: 30px;
+                                }
+                                
+                                .containerHero {
+                                    width: 15%;
+                                    background-color: rgba(192, 192, 192, 0.3);
+                                    text-align: center;
+                                    color: #CCA43B;
+                                    margin: 10px;
+                                    border-radius: 10px;
+                                    border: 5px;
+                                    padding: 5px;
+                                    font-weight: bold;
+                                    /* padding: 0.5px;*/
+                                }
+                                
+                                #buscador {
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    text-align: center;
+                                    flex-wrap: wrap;
+                                    margin-top: 40px;
+                                    margin-bottom: 40px;
+                                    margin-right: 40px;
+                                    margin-left: 30px;
+                                }
+                                
+                                .imgSearch {
+                                    width: 200px;
+                                    height: 150px;
+                                }
+                                
+                                .containerHeroSearch {
+                                    background-color: rgba(192, 192, 192, 0.3);
+                                    text-align: center;
+                                    color: #CCA43B;
+                                    margin: 10px;
+                                    border-radius: 10px;
+                                    border: 5px;
+                                    padding: 10px;
+                                    font-weight: bold;
+                                    /* padding: 0.5px;*/
+                                }
+                                
+                                .containerInfoSearch {
+                                    display: flex;
+                                    flex: row;
+                                    margin: 5px;
+                                    border-style: solid;
+                                    justify-content: space-around;
+                                    background-color: rgba(36, 47, 64, 0.5);
+                                }
+                                
+                                #OrdenarZaA {
+                                    display: flex;
+                                    flex-wrap: wrap;
+                                    justify-content: center;
+                                    margin-top: 40px;
+                                    margin-bottom: 40px;
+                                    margin-right: 40px;
+                                    margin-left: 30px;
+                                }
+                                
+                                #OrdenarAaZ {
+                                    display: flex;
+                                    flex-wrap: wrap;
+                                    justify-content: center;
+                                    margin-top: 40px;
+                                    margin-bottom: 40px;
+                                    margin-right: 40px;
+                                    margin-left: 30px;
+                                }
+                                
+                                .containerOrder {
+                                    width: 15%;
+                                    background-color: rgba(250, 190, 88, 0.3);
+                                    text-align: center;
+                                    color: #CCA43B;
+                                    margin: 10px;
+                                    border-radius: 10px;
+                                    border: 5px;
+                                    padding: 5px;
+                                    font-weight: bold;
+                                }
+                                
+                                .containerInfo {
+                                    display: flex;
+                                    flex: row;
+                                    margin: 2px;
+                                    border-style: solid;
+                                    justify-content: space-around;
+                                    background-color: rgba(36, 47, 64, 0.5);
+                                }
+                                
+                                .nameChampions {
+                                    font-size: 24px;
+                                    color: #CCA43B;
+                                }
+                                
+                                .namesChampions {
+                                    font-size: 24px;
+                                    color: #CCA43B;
+                                    /* background-color: black; */
+                                    margin: 0px;
+                                    margin-bottom: 5px;
+                                }
+                                
+                                #titleAssassin {
+                                    text-align: center;
+                                    text-decoration: underline;
+                                    color: white;
+                                    font-size: 30px;
+                                    font-family: 'Lucida Sans Unicode';
+                                }
+                                
+                                #containerChampions {
+                                    display: flex;
+                                    flex-wrap: wrap;
+                                    margin-top: 40px;
+                                    margin-bottom: 40px;
+                                    margin-right: 40px;
+                                    margin-left: 30px;
+                                    justify-content: center;
+                                    text-align: center;
+                                }
+                                
+                                #container {
+                                    width: 20%;
+                                    background-color: rgba(255, 100, 70, 0.3);
+                                    text-align: center;
+                                    margin: 10px;
+                                    border: 5px;
+                                    padding: 5px;
+                                    border-radius: 10px;
+                                    position: relative;
+                                    /*font-weight: bold;*/
+                                    /* padding: 0.5px;*/
+                                }
+                                
+                                #containerModal {
+                                    background-color: rgba(0, 0, 0, .8);
+                                    /* position: relative; */
+                                    position: fixed;
+                                    z-index: 1;
+                                    overflow: auto;
+                                    top: 0;
+                                    right: 0;
+                                    bottom: 0;
+                                    left: 0;
+                                    animation-name: modal;
+                                    animation-duration: 2s;
+                                    /* opacity: 0;
                                 pointer-events: none; */
-                                transition: all 1s;
-                                /*font-weight: bold;*/
-                                /* padding: 0.5px;*/
+                                    transition: all 1s;
+                                    /*font-weight: bold;*/
+                                    /* padding: 0.5px;*/
+                                }
+                                
+                                .miModales {
+                                    background-color: #e5e5e5;
+                                    width: 395px;
+                                    padding: 10px 20px;
+                                    margin: 20% auto;
+                                    position: relative;
+                                    border-radius: 10px;
+                                }
+                                
+                                #closeModal {
+                                    cursor: pointer;
+                                    color: black;
+                                    float: right;
+                                }
+                                
+                                .idModal {
+                                    font-size: 24px;
+                                    color: #CCA43B;
+                                    /* background-color: black; */
+                                    padding: 15px;
+                                    margin: 10px;
+                                    font-weight: bold;
+                                }
+                                
+                                #containerPart1 {
+                                    display: flex;
+                                    flex-direction: row;
+                                    justify-content: center;
+                                    align-items: center;
+                                    text-align: left;
+                                    margin: 5px;
+                                    padding: 10px;
+                                }
+                                
+                                .imgModalChampions {
+                                    border-radius: 50%;
+                                    border: solid;
+                                }
+                                
+                                .blurb {
+                                    color: #242f40;
+                                }
+                                
+                                .tituloInfo {
+                                    font-size: 20px;
+                                    color: #CCA43B;
+                                    text-decoration: underline;
+                                }
+                                
+                                table {
+                                    /* border: solid; */
+                                    margin: 0px;
+                                    text-align: center;
+                                    margin-left: auto;
+                                    margin-right: auto;
+                                    border: solid;
+                                }
+                                
+                                th {
+                                    border: solid;
+                                    margin: 0px;
+                                    background-color: #ffffff;
+                                }
+                                
+                                td {
+                                    border: solid;
+                                    background-color: #ffffff;
+                                }
+                                /* .underline {
+                                margin-top: 25px;
+                                border-bottom: solid;
+                            } */
+                                /* .modalStats {
+                                font-size: 20px;
+                                color: #CCA43B;
+                                text-decoration: underline;
+                                float: left;
                             }
-                            
-                            .miModales {
-                                background-color: #e5e5e5;
-                                width: 300px;
-                                padding: 10px 20px;
-                                margin: 20% auto;
-                                position: relative;
-                                border-radius: 10px;
-                            }
-                            
-                            #closeModal {
-                                cursor: pointer;
-                                color: black;
-                                float: right;
-                            }
-                            
-                            .imgModalChampions {
-                                border-radius: 50%;
-                                border: solid;
-                            }
-                            
-                            #containerPart1 {
-                                display: flex;
-                                flex-direction: row;
-                                justify-content: space-evenly;
-                            }
-                            
-                            th {
-                                border: solid;
-                                margin: 0px;
-                            }
-                            
-                            td {
-                                border: solid;
-                            }
-                            
-                            table {
-                                border: solid;
-                                margin: 0px;
-                            }
-                            
-                            #Ordenar1to4 {
-                                display: flex;
-                                flex-wrap: wrap;
-                                margin-top: 40px;
-                                margin-bottom: 40px;
-                                margin-right: 40px;
-                                margin-left: 30px;
-                                justify-content: center;
-                                text-align: center;
-                            }
-                            
-                            #Ordenar5to7 {
-                                display: flex;
-                                flex-wrap: wrap;
-                                margin-top: 40px;
-                                margin-bottom: 40px;
-                                margin-right: 40px;
-                                margin-left: 30px;
-                                justify-content: center;
-                                text-align: center;
-                            }
-                            
-                            #Ordenar8to10 {
-                                display: flex;
-                                flex-wrap: wrap;
-                                margin-top: 40px;
-                                margin-bottom: 40px;
-                                margin-right: 40px;
-                                margin-left: 30px;
-                                justify-content: center;
-                                text-align: center;
-                            }
-                            /* .containerModal {
+                             */
+                                
+                                #Ordenar1to4 {
+                                    display: flex;
+                                    flex-wrap: wrap;
+                                    margin-top: 40px;
+                                    margin-bottom: 40px;
+                                    margin-right: 40px;
+                                    margin-left: 30px;
+                                    justify-content: center;
+                                    text-align: center;
+                                }
+                                
+                                #Ordenar5to7 {
+                                    display: flex;
+                                    flex-wrap: wrap;
+                                    margin-top: 40px;
+                                    margin-bottom: 40px;
+                                    margin-right: 40px;
+                                    margin-left: 30px;
+                                    justify-content: center;
+                                    text-align: center;
+                                }
+                                
+                                #Ordenar8to10 {
+                                    display: flex;
+                                    flex-wrap: wrap;
+                                    margin-top: 40px;
+                                    margin-bottom: 40px;
+                                    margin-right: 40px;
+                                    margin-left: 30px;
+                                    justify-content: center;
+                                    text-align: center;
+                                }
+                                /* .containerModal {
                                 width: 20%;
                                 background-color: rgba(81, 209, 246, 0.3);
                                 text-align: center;
@@ -660,123 +725,123 @@
                                 border-radius: 10px;
                                 color: white;
                             } */
-                            
-                            .containerD {
-                                width: 15%;
-                                background-color: rgba(81, 209, 246, 0.5);
-                                text-align: center;
-                                margin: 15px;
-                                border: 5px;
-                                padding: 5px;
-                                border-radius: 5%;
-                                color: white;
-                                /*font-weight: bold;*/
-                                /* padding: 0.5px;*/
-                            }
-                            
-                            .imgAF {
-                                width: 100px;
-                                height: 100px;
-                                border-radius: 50%;
-                            }
-                            
-                            .aboutInfo {
-                                font-size: 12px;
-                                font-family: 'Lucida Sans Unicode';
-                                color: #081c15;
-                                border-style: solid;
-                                font-weight: normal;
-                                margin: 10px;
-                                padding: 10px;
-                                background-color: white;
-                                border-radius: 10px;
-                                margin-right: 10px;
-                                margin-left: 10px;
-                            }
-                            
-                            .containerButtons {
-                                display: flex;
-                                flex: row;
-                                justify-content: space-around;
-                                margin: 10px;
-                                padding: 5px;
-                            }
-                            
-                            .buttonInfoGeneral {
-                                color: #CCA43B;
-                                background-color: #242f40;
-                                width: 100px;
-                                cursor: pointer;
-                                border-radius: 10px;
-                                font-size: 12px;
-                            }
-                            
-                            .buttonStats {
-                                color: #CCA43B;
-                                background-color: #242f40;
-                                width: 50px;
-                                cursor: pointer;
-                                border-radius: 10px;
-                                font-size: 12px;
-                            }
-                            
-                            #rectanglefooter {
-                                height: 72px;
-                                left: 0px;
-                                top: 0px;
-                                background: #000000;
-                                display: flex;
-                                flex-direction: row;
-                                justify-content: space-around;
-                                align-items: center;
-                            }
-                            
-                            #showstats {
-                                text-align: center;
-                            }
-                            
-                            #containerResultStats {
-                                background-color: #eadda6;
-                                width: 200px;
-                                padding: 10px;
-                                margin-top: 50px;
-                                margin-left: 50px;
-                                /* display: flex;
+                                
+                                .containerD {
+                                    width: 15%;
+                                    background-color: rgba(81, 209, 246, 0.5);
+                                    text-align: center;
+                                    margin: 15px;
+                                    border: 5px;
+                                    padding: 5px;
+                                    border-radius: 5%;
+                                    color: white;
+                                    /*font-weight: bold;*/
+                                    /* padding: 0.5px;*/
+                                }
+                                
+                                .imgAF {
+                                    width: 100px;
+                                    height: 100px;
+                                    border-radius: 50%;
+                                }
+                                
+                                .aboutInfo {
+                                    font-size: 12px;
+                                    font-family: 'Lucida Sans Unicode';
+                                    color: #081c15;
+                                    border-style: solid;
+                                    font-weight: normal;
+                                    margin: 10px;
+                                    padding: 10px;
+                                    background-color: white;
+                                    border-radius: 10px;
+                                    margin-right: 10px;
+                                    margin-left: 10px;
+                                }
+                                
+                                .containerButtons {
+                                    display: flex;
+                                    flex: row;
+                                    justify-content: space-around;
+                                    margin: 10px;
+                                    padding: 5px;
+                                }
+                                
+                                .buttonInfoGeneral {
+                                    color: #CCA43B;
+                                    background-color: #242f40;
+                                    width: 100px;
+                                    cursor: pointer;
+                                    border-radius: 10px;
+                                    font-size: 12px;
+                                }
+                                
+                                .buttonStats {
+                                    color: #CCA43B;
+                                    background-color: #242f40;
+                                    width: 50px;
+                                    cursor: pointer;
+                                    border-radius: 10px;
+                                    font-size: 12px;
+                                }
+                                
+                                #rectanglefooter {
+                                    height: 72px;
+                                    left: 0px;
+                                    top: 0px;
+                                    background: #000000;
+                                    display: flex;
+                                    flex-direction: row;
+                                    justify-content: space-around;
+                                    align-items: center;
+                                }
+                                
+                                #showstats {
+                                    text-align: center;
+                                }
+                                
+                                #containerResultStats {
+                                    background-color: #eadda6;
+                                    width: 200px;
+                                    padding: 10px;
+                                    margin-top: 50px;
+                                    margin-left: 50px;
+                                    /* display: flex;
                             flex-direction: column; */
-                            }
-                            
-                            .containerstats {
-                                border-bottom: solid;
-                                color: #242f40;
-                            }
-                            
-                            .styleStats {
-                                color: #242f40;
-                                font-size: 12px;
-                                font-family: 'Lucida Sans Unicode';
-                                /* font-weight: normal; */
-                            }
-                            
-                            .containerResult {
-                                display: flex;
-                                flex-direction: row;
-                                justify-content: space-evenly;
-                                width: 100%;
-                            }
-                            
-                            .namesResult {
-                                font-family: 'Lucida Sans Unicode';
-                                font-style: normal;
-                                font-size: 12px;
-                                color: #225170;
-                            }
-                            
-                            .imgStats {
-                                width: 30px;
-                                height: 30px;
-                                border-radius: 50%;
-                            }
-                            /* .modales {
+                                }
+                                
+                                .containerstats {
+                                    border-bottom: solid;
+                                    color: #242f40;
+                                }
+                                
+                                .styleStats {
+                                    color: #242f40;
+                                    font-size: 12px;
+                                    font-family: 'Lucida Sans Unicode';
+                                    /* font-weight: normal; */
+                                }
+                                
+                                .containerResult {
+                                    display: flex;
+                                    flex-direction: row;
+                                    justify-content: space-evenly;
+                                    width: 100%;
+                                }
+                                
+                                .namesResult {
+                                    font-family: 'Lucida Sans Unicode';
+                                    font-style: normal;
+                                    font-size: 12px;
+                                    color: #225170;
+                                }
+                                
+                                .imgStats {
+                                    width: 30px;
+                                    height: 30px;
+                                    border-radius: 50%;
+                                }
+                                /* .modales {
                                 background-color: rgba(0, 0, 0, .8);
                                 position: fixed;
                                 top: 0;
@@ -787,7 +852,7 @@
                                 pointer-events: none;
                                 transition: all 1s;
                             } */
-                            /* #show:target {
+                                /* #show:target {
                                 opacity: 1;
                                 pointer-events: auto;
                             } */

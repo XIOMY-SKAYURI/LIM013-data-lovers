@@ -1,9 +1,9 @@
 import { ordenaZaA, ordenaAaZ } from './data.js';
 import { result1to4, result5to7, result8to10 } from './data.js';
-import { arrayChampions } from './data.js';
+// import { arrayChampions } from './data.js';
 import { filter, minspellblock, maxspellblock, promediohp, promediomp, minarmor, maxarmor } from './data.js';
 import data from './data/lol/lol.js';
-console.log(data);
+// console.log(data);
 
 const containerChampions = document.getElementById('containerChampions');
 const formulario = document.querySelector('#search1');
@@ -13,7 +13,7 @@ const showChampions = document.getElementById("showChampions");
 // formulario.innerHTML = '';
 //Modal de bienvenida
 let modal = document.getElementById('miModal');
-let flex = document.getElementById('flex');
+// let flex = document.getElementById('flex');
 let cerrar = document.getElementById('close');
 
 cerrar.addEventListener('click', () => {
@@ -22,7 +22,10 @@ cerrar.addEventListener('click', () => {
 
 
 //MOSTRAR TODOS LOS CAMPEONES
-for (const [key, value] of Object.entries(data.data)) {
+
+//Object.values(lol.data);
+
+for (const value of Object.values(data.data)) {
     let id = value.id;
     let name = id.toUpperCase();
     let img = value.splash;
@@ -66,7 +69,7 @@ for (const [key, value] of Object.entries(data.data)) {
     containerInfo.appendChild(newDivMagic);
     containerHero.appendChild(containerInfo);
     infoChampions.appendChild(containerHero);
-};
+}
 
 //BUSCAR TODOS LOS CAMPEONES
 boton.addEventListener("click", () => {
@@ -74,7 +77,7 @@ boton.addEventListener("click", () => {
     infoBuscador.innerHTML = '';
     // console.log(formulario.value);
     const texto = formulario.value.toLowerCase();
-    for (const [key, value] of Object.entries(data.data)) {
+    for (const value of Object.values(data.data)) {
         let name = value.name.toLowerCase();
         let img = value.splash;
         let infoAttack = value.info.attack;
@@ -118,7 +121,7 @@ boton.addEventListener("click", () => {
             containerHero.appendChild(containerInfo);
             infoBuscador.appendChild(containerHero);
         }
-    };
+    }
     if (infoBuscador.innerHTML === '') {
         infoBuscador.innerHTML += "<span style = 'color:white;font-size:50px; font-weight: bolder;margin: 10px 40px 10px 430px;' > No results found 😖 </span>";
     }
@@ -132,7 +135,7 @@ const range2 = document.getElementById("rangeModerate");
 const range3 = document.getElementById("rangeHigh");
 //Ordenar
 //--DE LA A a Z
-for (const [key, value] of Object.entries(ordenaAaZ)) {
+for (const value of Object.values(ordenaAaZ)) {
     let id = value.id;
     //console.log(id);
     let name = id.toUpperCase();
@@ -179,7 +182,7 @@ for (const [key, value] of Object.entries(ordenaAaZ)) {
     containerOrder.appendChild(containerInfo);
 
     infoOrder.appendChild(containerOrder);
-};
+}
 
 
 const OrdenarAaZ = document.getElementById("AtoZ");
@@ -191,7 +194,7 @@ OrdenarAaZ.addEventListener("click", () => {
     range2.classList.add("ocultar");
 });
 //--DE LA Z a A
-for (const [key, value] of Object.entries(ordenaZaA)) {
+for (const value of Object.values(ordenaZaA)) {
     let id = value.id;
     //console.log(id);
     let name = id.toUpperCase();
@@ -237,7 +240,7 @@ for (const [key, value] of Object.entries(ordenaZaA)) {
     containerInfo.appendChild(newDivMagicOrder);
     containerOrder.appendChild(containerInfo);
     infoOrder.appendChild(containerOrder);
-};
+}
 
 
 const OrdenarZaA = document.getElementById("ZtoA");
@@ -251,7 +254,7 @@ OrdenarZaA.addEventListener("click", () => {
 });
 //Type LEVEL DIFFICULTY
 //1to4
-for (const [key, value] of Object.entries(result1to4)) {
+for (const value of Object.values(result1to4)) {
     let id = value.id;
     //console.log(id);
     let name = id.toUpperCase();
@@ -279,7 +282,7 @@ for (const [key, value] of Object.entries(result1to4)) {
     newDivDefenseOrder.innerHTML = "<span style = 'color:white; font-weight: bolder;'> Difficulty: </span>" + infoDifficulty;
     containerF.appendChild(newDivDefenseOrder);
     filterD.appendChild(containerF);
-};
+}
 
 
 const Ordenar1to4 = document.getElementById("range1to4");
@@ -293,7 +296,7 @@ Ordenar1to4.addEventListener("click", () => {
 });
 
 //5to7
-for (const [key, value] of Object.entries(result5to7)) {
+for (const value of Object.values(result5to7)) {
     let id = value.id;
     //console.log(id);
     let name = id.toUpperCase();
@@ -319,7 +322,7 @@ for (const [key, value] of Object.entries(result5to7)) {
     newDivDefenseOrder.innerHTML = "<span style = 'color:white; font-weight: bolder;'> Difficulty: </span>" + infoDifficulty;
     containerF.appendChild(newDivDefenseOrder);
     filterD.appendChild(containerF);
-};
+}
 
 
 const Ordenar5to7 = document.getElementById("range5to7");
@@ -333,7 +336,7 @@ Ordenar5to7.addEventListener("click", () => {
 });
 
 //8to10
-for (const [key, value] of Object.entries(result8to10)) {
+for (const value of Object.values(result8to10)) {
     let id = value.id;
     //console.log(id);
     let name = id.toUpperCase();
@@ -360,7 +363,7 @@ for (const [key, value] of Object.entries(result8to10)) {
     containerF.appendChild(newDivDefenseOrder);
 
     filterD.appendChild(containerF);
-};
+}
 
 const Ordenar8to10 = document.getElementById("range8to10");
 Ordenar8to10.addEventListener("click", () => {
@@ -393,6 +396,28 @@ const mostrarData = (array) => {
         let defense = item.info.defense;
         let magic = item.info.magic;
         let difficulty = item.info.difficulty;
+        //stats
+        let partype = item.partype;
+        let statshp = item.stats.hp;
+        let statshpperlevel = item.stats.hpperlevel;
+        let statsmp = item.stats.mp;
+        let statsmpperlevel = item.stats.mpperlevel;
+        let statsmovespeed = item.stats.movespeed;
+        let statsarmor = item.stats.armor;
+        let statsarmorperlevel = item.stats.armorperlevel;
+        let statsspellblock = item.stats.spellblock;
+        let statsspellblockperlevel = item.stats.spellblockperlevel;
+        let statsattackrange = item.stats.attackrange;
+        let statshpregen = item.stats.hpregen;
+        let statshpregenperlevel = item.stats.hpregenperlevel;
+        let statsmpregen = item.stats.mpregen;
+        let statsmpregenperlevel = item.stats.mpregenperlevel;
+        let statscrit = item.stats.crit;
+        let statscritperlevel = item.stats.critperlevel;
+        let statsattackdamage = item.stats.attackdamage;
+        let statsattackdamageperlevel = item.stats.attackdamageperlevel;
+        let statsattackspeedoffset = item.stats.attackspeedoffset;
+        let statsattackspeedperlevel = item.stats.attackspeedperlevel;
 
         //CONTAINER GENERAL 
         const containerGeneral = document.getElementById("containerChampions");
@@ -425,23 +450,28 @@ const mostrarData = (array) => {
         containerModal.appendChild(exis);
         const idModal = document.createElement("p");
         idModal.innerHTML = idChampions
+        idModal.className = "idModal"
         containerModal.appendChild(idModal);
 
-        const containerPart1 = document.createElement("div");
-        containerPart1.setAttribute("id", "containerPart1")
+
         const imgModalChampions = document.createElement("img");
         imgModalChampions.setAttribute("src", imgModal);
-        imgModalChampions.setAttribute("width", "100");
-        imgModalChampions.setAttribute("height", "100");
+        imgModalChampions.setAttribute("width", "70");
+        imgModalChampions.setAttribute("height", "70");
         imgModalChampions.className = "imgModalChampions"
-        containerPart1.appendChild(imgModalChampions);
+        containerModal.appendChild(imgModalChampions);
 
         const blurbModal = document.createElement("p")
         blurbModal.innerHTML = blurb;
-        containerPart1.appendChild(blurbModal);
-        containerModal.appendChild(containerPart1);
+        blurbModal.className = "blurb";
+        containerModal.appendChild(blurbModal);
+
 
         const infoGeneral = document.createElement("div")
+        const tituloInfo = document.createElement("p")
+        tituloInfo.innerHTML = "General Information"
+        tituloInfo.className = "tituloInfo"
+        infoGeneral.appendChild(tituloInfo)
         const tablainfo = document.createElement("table");
         tablainfo.className = ("tableModel")
         const tableHead = document.createElement("thead");
@@ -482,13 +512,125 @@ const mostrarData = (array) => {
         infoGeneral.appendChild(tablainfo);
         containerModal.appendChild(infoGeneral);
 
+        // const underline = document.createElement("div");
+        // underline.className = "underline"
+        // containerModal.appendChild(underline);
+
+        // const modalStats = document.createElement("p");
+        // modalStats.className = "tituloInfo";
+        // modalStats.innerHTML = "Statistics";
+        // containerModal.appendChild(modalStats);
+
+        const modalStats = document.createElement("p");
+        modalStats.className = "tituloInfo";
+        modalStats.innerHTML = "Statistics";
+        containerModal.appendChild(modalStats)
+
+        const containerPart1 = document.createElement("div");
+        containerPart1.setAttribute("id", "containerPart1")
+
+
+        const stats1 = document.createElement("div");
+        const partypemodal = document.createElement("p");
+        partypemodal.innerHTML = "<span style = 'color:#242f40; font-weight: bolder;'> Partype: </span>" + partype
+        stats1.appendChild(partypemodal)
+
+
+        const statshpmodal = document.createElement("p");
+        statshpmodal.innerHTML = "<span style = 'color:#242f40; font-weight: bolder;'> HP: </span>" + statshp
+        stats1.appendChild(statshpmodal)
+
+        const hpperlevelmodal = document.createElement("p");
+        hpperlevelmodal.innerHTML = "<span style = 'color:#242f40; font-weight: bolder;'> hpperlevel: </span>" + statshpperlevel
+        stats1.appendChild(hpperlevelmodal)
+
+        const statsmpmodal = document.createElement("p");
+        statsmpmodal.innerHTML = "<span style = 'color:#242f40; font-weight: bolder;'> MP: </span>" + statsmp
+        stats1.appendChild(statsmpmodal)
+
+        const statsmpperlevelmodal = document.createElement("p");
+        statsmpperlevelmodal.innerHTML = "<span style = 'color:#242f40; font-weight: bolder;'> mpperlevel: </span>" + statsmpperlevel
+        stats1.appendChild(statsmpperlevelmodal)
+
+        const statsmovespeedmodal = document.createElement("p");
+        statsmovespeedmodal.innerHTML = "<span style = 'color:#242f40; font-weight: bolder;'> movespeed: </span>" + statsmovespeed
+        stats1.appendChild(statsmovespeedmodal)
+
+        const statsarmormodal = document.createElement("p");
+        statsarmormodal.innerHTML = "<span style = 'color:#242f40; font-weight: bolder;'> armor: </span>" + statsarmor
+        stats1.appendChild(statsarmormodal)
+
+        const statsarmorperlevelmodal = document.createElement("p");
+        statsarmorperlevelmodal.innerHTML = "<span style = 'color:#242f40; font-weight: bolder;'> armorperlevel: </span>" + statsarmorperlevel
+        stats1.appendChild(statsarmorperlevelmodal)
+
+        const statsspellblockmodal = document.createElement("p");
+        statsspellblockmodal.innerHTML = "<span style = 'color:#242f40; font-weight: bolder;'> spellblock: </span>" + statsspellblock
+        stats1.appendChild(statsspellblockmodal)
+
+        const statsspellblockperlevelmodal = document.createElement("p");
+        statsspellblockperlevelmodal.innerHTML = "<span style = 'color:#242f40; font-weight: bolder;'> spellblockperlevel: </span>" + statsspellblockperlevel
+        stats1.appendChild(statsspellblockperlevelmodal)
+
+        const statsattackrangemodal = document.createElement("p");
+        statsattackrangemodal.innerHTML = "<span style = 'color:#242f40; font-weight: bolder;'> spellblockperlevel: </span>" + statsattackrange
+        stats1.appendChild(statsattackrangemodal)
+
+        containerPart1.appendChild(stats1);
+
+        const stats2 = document.createElement("div");
+        const statshpregenmodal = document.createElement("p");
+        statshpregenmodal.innerHTML = "<span style = 'color:#242f40; font-weight: bolder;'> hpregen: </span>" + statshpregen
+        stats2.appendChild(statshpregenmodal)
+
+        const statshpregenperlevelmodal = document.createElement("p");
+        statshpregenperlevelmodal.innerHTML = "<span style = 'color:#242f40; font-weight: bolder;'> hpregenperlevel: </span>" + statshpregenperlevel
+        stats2.appendChild(statshpregenperlevelmodal)
+
+        const statsmpregenmodal = document.createElement("p");
+        statsmpregenmodal.innerHTML = "<span style = 'color:#242f40; font-weight: bolder;'> mpregen: </span>" + statsmpregen
+        stats2.appendChild(statsmpregenmodal)
+
+        const statsmpregenperlevelmodal = document.createElement("p");
+        statsmpregenperlevelmodal.innerHTML = "<span style = 'color:#242f40; font-weight: bolder;'> mpregenperlevel: </span>" + statsmpregenperlevel
+        stats2.appendChild(statsmpregenperlevelmodal)
+
+
+        const statscritmodal = document.createElement("p");
+        statscritmodal.innerHTML = "<span style = 'color:#242f40; font-weight: bolder;'> crit: </span>" + statscrit
+        stats2.appendChild(statscritmodal)
+
+        const statscritperlevelmodal = document.createElement("p");
+        statscritperlevelmodal.innerHTML = "<span style = 'color:#242f40; font-weight: bolder;'> critperlevel: </span>" + statscritperlevel
+        stats2.appendChild(statscritperlevelmodal)
+
+        const statsattackdamagemodal = document.createElement("p");
+        statsattackdamagemodal.innerHTML = "<span style = 'color:#242f40; font-weight: bolder;'> attackdamage: </span>" + statsattackdamage
+        stats2.appendChild(statsattackdamagemodal)
+
+        const statsattackdamageperlevelmodal = document.createElement("p");
+        statsattackdamageperlevelmodal.innerHTML = "<span style = 'color:#242f40; font-weight: bolder;'> attackdamageperlevel: </span>" + statsattackdamageperlevel
+        stats2.appendChild(statsattackdamageperlevelmodal)
+
+        const statsattackspeedoffsetmodal = document.createElement("p");
+        statsattackspeedoffsetmodal.innerHTML = "<span style = 'color:#242f40; font-weight: bolder;'> attackspeedoffset: </span>" + statsattackspeedoffset
+        stats2.appendChild(statsattackspeedoffsetmodal)
+
+        const statsattackspeedperlevelmodal = document.createElement("p");
+        statsattackspeedperlevelmodal.innerHTML = "<span style = 'color:#242f40; font-weight: bolder;'> attackspeedperlevel: </span>" + statsattackspeedperlevel
+        stats2.appendChild(statsattackspeedperlevelmodal)
+
+        containerPart1.appendChild(stats2);
+
+        containerModal.appendChild(containerPart1);
+
         containerGeneralModal.appendChild(containerModal);
         containerGeneral.appendChild(containerGeneralModal);
 
         const containerButtons = document.createElement("div");
         containerButtons.className = "containerButtons";
         const buttonInfoGeneral = document.createElement("a");
-        buttonInfoGeneral.innerHTML = "Information";
+        buttonInfoGeneral.innerHTML = "See more";
         buttonInfoGeneral.className = " buttonInfoGeneral";
         buttonInfoGeneral.setAttribute("href", "#show");
         buttonInfoGeneral.setAttribute("id", "show");
@@ -705,7 +847,7 @@ for (let button of buttonType) {
         minSpell(minspellblock(dataFilter));
 
     });
-};
+}
 
 //Mostrar Título  por tipo de campeón
 
